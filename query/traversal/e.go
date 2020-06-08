@@ -21,7 +21,7 @@
 package traversal
 
 // E is to access the edges of the traversal.
-func (g String) E() String {
-	g.AddStep("E")
+func (g String) E(params ...interface{}) String {
+	g.AddStep("E", params...)
 	return g
 }
