@@ -42,7 +42,7 @@ func TextContainsPrefix(str string) *Predicate {
 // TextContainsRegex finds if one word inside
 // the text string matches the given regular expression.
 func TextContainsRegex(str string) *Predicate {
-	s := "textContains(" + str + ")"
+	s := "textContainsRegex(" + str + ")"
 	a := Predicate(s)
 	return &a
 }
@@ -50,7 +50,7 @@ func TextContainsRegex(str string) *Predicate {
 // TextContainsFuzzy finds if one word inside
 // the text string is similar to the query string.
 func TextContainsFuzzy(str string) *Predicate {
-	s := "textContains(" + str + ")"
+	s := "textContainsFuzzy(" + str + ")"
 	a := Predicate(s)
 	return &a
 }
