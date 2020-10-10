@@ -54,9 +54,9 @@ type WebSocket struct {
 func (ws *WebSocket) Connect() error {
 	var err error
 	dialer := websocket.Dialer{
-		WriteBufferSize:  1024 * 8, // Set up for large messages.
-		ReadBufferSize:   1024 * 8, // Set up for large messages.
-		HandshakeTimeout: 5 * time.Second,
+		WriteBufferSize:  1024 * 1024 * 8,  // 8M Set up for large messages.
+		ReadBufferSize:   1024 * 1024 * 64, // 64M Set up for large messages .
+		HandshakeTimeout: 60 * time.Second,
 	}
 
 	// Check if the host address already has the proper
